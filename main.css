@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  background: #0e0e0e;
+}
+main {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.img-principal-container {
+  background: url(http://matthew.wagerfield.com/parallax/assets/images/background.jpg)
+    no-repeat;
+  bottom: 0px;
+  background-size: 100% auto;
+  position: absolute;
+  width: 110%;
+  left: 0%;
+  top: -20%;
+  transition: all 0.1s;
+  transform: translate3d(0px, 0px, 0px);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  /* transition: transform 0.5s ease-in-out; */
+  z-index: 1
+}
+.waves-container {
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+  right: 0;
+  z-index: 50;
+}
+.elem{
+  width: 300%;
+  margin: 0px 0px;
+  height:  350px;
+  position: absolute;
+}
+
+.elem-1 {
+  bottom: -50px;
+  height:  200px;
+}
+.elem-2 {
+ bottom: -75px;
+ left: -10px;
+ height:  230px;
+}
+.elem-3 {
+  bottom: -125px;
+  left: 30px;
+  height:  260px;
+}
+.elem-4 {
+ bottom: -205px;
+ left: -10px;
+ height:  290px;
+}
+.elem-5 {
+  bottom: -350px;
+  height:  320px;
+}
+.elem-6 {
+ bottom: -475px;
+ left: 500px;
+ height:  350px;
+}
+
+.wave-bg {
+  height: 100%;
+  width: 100%;
+  background: url("wave-paint-long.png");
+  background-size: auto 100%;
+}
+
+.wave-bg-anim {
+  animation: circle 5s linear infinite;
+}
+.wave-bg-anim-anti {
+  animation: circle-anti 5s linear infinite;
+}
+.wave-bg-anim-anti-slow {
+  animation: circle-anti-30 7s linear infinite;
+}
+
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-15px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-15px)
+              rotate(-360deg);
+  }
+}
+@keyframes circle-anti {
+  0%{
+    transform:rotate(0deg)
+              translate(15px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(15px)
+              rotate(-360deg);
+  }
+}
+
+@keyframes circle-anti-30 {
+  0%{
+    transform:rotate(0deg)
+              translate(30px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(30px)
+              rotate(-360deg);
+  }
+}
